@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+        ubuntu:
+                image: ubuntu:latest
+                container_name: ubuntu_test
+                command: mkdir test
+                command: touch test/change_me.txt
+                volumes:
+                        - ${PWD}/:/test 
+                
